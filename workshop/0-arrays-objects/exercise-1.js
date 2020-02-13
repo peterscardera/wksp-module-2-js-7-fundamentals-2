@@ -15,13 +15,18 @@ var mostPopularFood = [
     undefined,
 ];
 
-// The array holds a top-ten list of foods as ranked by Grubhub.
-// #1 and #10 are missing
-//       #1 is 'bean burritos'
-//      #10 is 'buffalo-flavored cauliflower' (not kidding)
 
-// Write a program that will do the following:
-// Add them to the array in the right position
-// Output them in a tidy top-ten fashion in the console.
+mostPopularFood.pop()
+//console.table(mostPopularFood) now we dont have the indefined
 
-// NO for loops!
+mostPopularFood.push("buffalo flavored cauliflower") //add to the end
+//console.table(mostPopularFood) //its been added
+mostPopularFood.unshift("bean burritos") //shift removes the first while unshift adds
+//console.table(mostPopularFood) //looks good
+
+
+//to add order
+
+mostPopularFood.forEach(function(item,id) {
+    console.log( `${id+1}:${item}`);
+});

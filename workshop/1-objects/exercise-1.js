@@ -19,6 +19,24 @@
 // A) console.log() your object.
 // B) console.log() a few of the values in the object.
 
+
+var detailsObj = {
+    name: {
+        first: "Peter",
+        last: "Scardera",
+    },
+    age: "28",
+    city: "Montreal",
+    siblings: 1,
+    petName: "none",
+    monthOfBirth: "oct"
+}
+
+console.log(detailsObj.name.last) //Scardera
+
+console.log(detailsObj.age) //28
+console.log(detailsObj.monthOfBirth) // oct
+
 //-------------------------------------------------
 
 // Exercise 1.1
@@ -31,6 +49,27 @@
 //     - Pets (number of pets, names of pets, etc.)
 
 // HINT: You can just modify the object that you created before.
+
+var detailsObj = {
+    name: {
+        first: "Peter",
+        last: "Scardera",
+    },
+    age: "28",
+    city: "Montreal",
+    siblings: 1,
+    petName: "none",
+    monthOfBirth: "oct"
+}
+
+detailsObj.name.middleName = "mario"
+
+detailsObj.favColor = { 
+    colors: "orange",
+    colors2: "red"
+}
+
+console.log(detailsObj)
 
 //-------------------------------------------------
 
@@ -48,7 +87,13 @@
 // represent a collection of similar things?
 
 var favoriteMovie = {
-
+    title: "1917",
+    releaseDate: 2020,
+    Director: "Sam Mendes",
+    Starts: {
+        first: "Dean-Charles CHapman",
+        second: "Dean-Charles MacKAy"
+    }
 }
 
 
@@ -65,8 +110,9 @@ const person = {
     hometown: "somewhere"
 };
 
-person[age];    // => 26
-person.key;     // => "Alyssa P. Hacker"
+person["age"];  // 26
+person.age // => 26
+person.name;     // => "Alyssa P. Hacker"
 
 
 //-------------------------------------------------
@@ -89,9 +135,12 @@ const alyssa = {
 };
 
 function fullName(person) {
-    // Your code here
-
+    let first = person.name.first
+    let middle = person.name.middle
+    let last = person.name.last
+return `${first} ${middle} ${last}`
 }
+
 
 console.log(fullName(alyssa)); // => "Alyssa P. Hacker"
 
@@ -114,8 +163,11 @@ const rick = {
 };
 
 function betterFullName(person) {
-    // Your code here
-
+    let first = person.name.first
+    let middle = person.name.middle
+    let last = person.name.last
+return `${first} ${middle || ""} ${last}`
 }
+
 
 console.log(betterFullName(rick)); // => "Rick Sanchez"

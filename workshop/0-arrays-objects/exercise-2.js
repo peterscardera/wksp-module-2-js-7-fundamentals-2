@@ -3,6 +3,20 @@
 const lateComers = ["Felicia", "Charles", "Terry"];
 const earlyBirds = ["Ellen", "Jerry", "Jasmine"];
 
+/*
+earlyBirds.push(...lateComers)
+console.log(earlyBirds)
+*/
+
+//or 
+
+let improvedList = earlyBirds.concat(lateComers)
+console.log(improvedList)
+
+improvedList.forEach(function(item,index) {
+    console.log(`${index}:${item}`) 
+})
+
 // You have two arrays above of people who arrived late to your party and
 // people who arrived early.
 // Create a new array that holds all of the party attendees and

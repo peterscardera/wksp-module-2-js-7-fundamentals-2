@@ -9,6 +9,15 @@ You have an object that you _need_ to iterate over.
 ```js
 // Example - I need to display just the names in a list
 const friendsAge = { 'Kevin': 32, 'Rick': 60, 'Morty': 14, 'Jerry': 35 }
+
+
+//items below could be anything
+Object.keys(friendsAge).forEach(function(item){
+    console.log(friendsAge[item]) 
+})
+
+// 32,60,14,35
+
 ```
 
 ---
@@ -18,6 +27,7 @@ const friendsAge = { 'Kevin': 32, 'Rick': 60, 'Morty': 14, 'Jerry': 35 }
 ```js
 // Example - I need to display just the names in a list
 const friendsAge = { 'Kevin': 32, 'Rick': 60, 'Morty': 14, 'Jerry': 35 }
+// there is no order in objects**
 
 ```
 

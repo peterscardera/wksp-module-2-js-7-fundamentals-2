@@ -49,6 +49,28 @@ const staffMembers = [
     },
 ];
 
+
+function jsFinder(name){ 
+
+    for (let i = 0; i < staffMembers.length; i++){
+        if(staffMembers[i].name == name) {
+            return staffMembers[i].skillLevels.javascript
+        }
+    }
+}
+console.log(jsFinder("Thor Odinson")) // 4 aaaannd i should have done for each
+
+/*
+
+staffMembers.forEach(function(item){
+    if(item.name == name) {
+        console.log(item.skillLevels.javascript)
+    }
+})
+*/
+
+
+
 // We need you to write a script that will print someone's JavaScript ability level.
 // Write a line that will print the JavaScript level for employee Chuck Taylor.
 
